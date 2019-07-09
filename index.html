@@ -5,10 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>GifTastic</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../giftastic/css/style.css">
 </head>
 
 <body>
+
     
+<div class=container>
+    <!-- Header -->
+    <h1 class="text-center">Let's Get Giphy With It!</h1>
+    <!-- Giphy Search Form -->
+        <form class="text-center">
+            <label>Seek and Destroy</label>
+            <input type="text">
+            <input type="submit" value="Submit">
+        </form>
+            <!-- Pre-Existing Buttons -->
+                <div id="buttons"></div>
+                <!-- This is where the newe gifs will load -->
+                    <div id="gifs"></div>
+</div>
+
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="../giftastic/javascript/giphy.js"></script>
+
 </body>
 </html>
