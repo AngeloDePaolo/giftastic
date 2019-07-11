@@ -1,39 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>GifTastic</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../giftastic/css/style.css">
 </head>
 
 <body>
 
-    
-<div class=container>
-    <!-- Header -->
-    <h1 class="text-center">Let's Get Giphy With It!</h1>
-    <!-- Giphy Search Form -->
-        <form class="text-center">
-            <label>Seek and Destroy</label>
-            <input type="text">
-            <input type="submit" value="Submit">
+    <div class=container>
+        <!-- Header -->
+        <h1 class="text-center">GifTastic Goodness</h1>
+        <!-- Giphy Search Form -->
+        <form id="topicInput">
+            <label for="searchText">Let's Get Giphy With It!</label>
+            <input type="text" id="searchText">
+            <input id="add-movie" type="submit" value="Submit">
         </form>
-            <!-- Pre-Existing Buttons -->
-                <div id="buttons"></div>
-                <!-- This is where the newe gifs will load -->
-                    <div id="gifs"></div>
-</div>
+        <!-- Landing zone for Buttons -->
+        <div id="buttons"></div>
+        <!-- This is where the new gifs will appear -->
+        <div id="gifs"></div>
+    </div>
+
+    var queryURL = "https://api.giphy.com/v1/gifs/trending?api_key=oneTBf80oxo9NHP7zG0HTUxomuvCAts0";
+
+    $.ajax({
+      url: queryURL,
+      method: "GET"
+    }).then(function(response) {
+      console.log(response);
+    });
 
 
 
 
 
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="../giftastic/javascript/giphy.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../giftastic/javascript/giphy.js"></script>
 
 </body>
+
 </html>

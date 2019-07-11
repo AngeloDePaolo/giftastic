@@ -2,3 +2,8 @@ body {
     background-image: url();
 }
 
+form {
+    width: 40%;
+    margin: auto;
+}
+
