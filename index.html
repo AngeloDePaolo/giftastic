@@ -23,19 +23,40 @@
             <input id="add-movie" type="submit" value="Submit">
         </form>
         <!-- Landing zone for Buttons -->
-        <div id="buttons"></div>
+        <div id="buttons">
+            <button data-person="Adele">
+                    Hello from the other side
+            </button>
+        </div>
         <!-- This is where the new gifs will appear -->
         <div id="gifs"></div>
     </div>
 
-    var queryURL = "https://api.giphy.com/v1/gifs/trending?api_key=oneTBf80oxo9NHP7zG0HTUxomuvCAts0";
 
-    $.ajax({
-      url: queryURL,
-      method: "GET"
-    }).then(function(response) {
-      console.log(response);
-    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // var queryURL = "https://api.giphy.com/v1/gifs/trending?api_key=oneTBf80oxo9NHP7zG0HTUxomuvCAts0";
+
+    // $.ajax({
+    //   url: queryURL,
+    //   method: "GET"
+    // }).then(function(response) {
+    //   console.log(response);
+    // });
 
 
 
